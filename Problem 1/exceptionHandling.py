@@ -1,3 +1,7 @@
+"""
+Name: Owen Anderson
+Lab Time: THUR 2:00 - 3:15
+"""
 def exceptionHandling():
     # Split input into 2 parts: name and age
     parts = input().split()
@@ -5,8 +9,11 @@ def exceptionHandling():
     while name != '-1':
         # FIXME: The following line will throw ValueError exception.
         #        Insert try/except blocks to catch the exception.
-        age = int(parts[1]) + 1
-        print(f'{name} {age}')
+        try:
+            age = int(parts[1]) + 1
+            print(f'{name} {age}')
+        except:
+            print(f'{name} {0}')
         
         # Get next line
         parts = input().split()
