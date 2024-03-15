@@ -41,16 +41,17 @@ def courseGrade():
                 else: 
                     grade = "F"
                 report.write(str(line[0])+'\t'+str(line[1])+'\t'+str(line[2])+'\t'+str(line[3])+'\t'+str(line[4])+'\t'+ str(grade)+'\n')
-                row_num += 1    
+                row_num += 1
+
             midterm1_ave += (midterm1)/(row_num)
             midterm2_ave += (midterm2)/(row_num)
             final_ave += (final)/(row_num)
             report.write('\n' + f"Averages: midterm1 {midterm1_ave:.2f}, midterm2 {midterm2_ave:.2f}, final {final_ave:.2f}")
 
 
+
     return
 
 if __name__ == "__main__":
     courseGrade()
-    
-    
+
